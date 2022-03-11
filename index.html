@@ -9,26 +9,15 @@
       </head>
       <body>
         <div class="form-container">
-            <form class="form">
-                  <input id="search" type="text" placeholder="search..."/>
-                  <button id="searchButton">Search</button>
-                  <button id="clear" class="clear-results">Clear</button>
-            </form>
+            <input id="search" type="text" placeholder="search..."/>
+            <button onclick="searchPokemon()" id="searchButton">Search</button>
+            <button id="clear" class="clear-results">Clear</button>
         </div>
 
-        <div class="results-container>
-           <ul class="results-list" id="list">
-           </ul>
-        </div>
-    
-         <script src="index.js"></script>
-
-         <!-- <div>
-            <input type="text" id="myText" value="Pokemon image">
-            <button id="save" class="save-results">Save</button>
-         </div> -->
          <div class="pokemon_image">
-            <img src="" id="pokemon_img">
+            <img onclick="flip()" src="" id="pokemon_img">
          </div>
+
+         <script src="index.js"></script>
         </body>
    </html>
