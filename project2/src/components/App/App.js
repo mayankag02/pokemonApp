@@ -9,6 +9,9 @@ function App() {
   const [pokemonList, setPokemonList] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState();
+  const [selectedPokemon, setSelectedPokemon] = useState(null);
+
+  console.log("pokemon: ", selectedPokemon);
 
   useEffect(() => {
     setIsLoading(true);
@@ -31,7 +34,7 @@ function App() {
         <ul className={styles.pokemonList}>
           {pokemonList.map((p, i) => (
             <li key={i}>
-              <PokemonCard pokemon={p} onSelect={() => null} />
+              <PokemonCard pokemon={p} onSelect={setSelectedPokemon} />
             </li>
           ))}
         </ul>
