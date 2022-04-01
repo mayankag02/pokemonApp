@@ -2,6 +2,7 @@ import styles from './App.module.css'
 import Header from '../Header/Header'
 import { useEffect, useState } from 'react';
 import { fetchPokemonList } from '../../api/pokemon';
+import { PokemonCard } from '../PokemonCard/PokemonCard';
 
 function App() {
 
@@ -30,7 +31,7 @@ function App() {
         <ul className={styles.pokemonList}>
           {pokemonList.map((p, i) => (
             <li key={i}>
-              {p.name}
+              <PokemonCard pokemon={p} onSelect={() => null} />
             </li>
           ))}
         </ul>
